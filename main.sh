@@ -4,33 +4,38 @@ while :; do
   # Exercise selection
   read -p 'Select one of thirteen scripts to run. [0=quit/1-13] ' option
 
-  if [[ $option =~ ^[0-9]+$ ]]; then
-    if [[ $option == 0 ]]; then
-      echo Exiting...
-      exit
-    fi
-
+  case $option in
+  ^[0-9]+$)
     echo
-    echo "Problem $option:"
+    echo 'Problem $option:'
     cat statements/stat$option
     echo
 
     case $option in
+    0)
+      echo 'Exiting...'
+      exit
+      ;;
     1 | 3 | 4 | 7 | 9 | 11)
       read -p 'Input: ' input
       echo 'Output:'
-      ./exercises/ex$option'.sh' $input
+      ./exercises/ex$option.sh $input
+      ;;
+    2 | 5 | 6 | 8 | 10 | 13)
+      echo 'Output:'
+      ./exercises/ex$option.sh
       ;;
     *)
-      echo 'Output:'
-      ./exercises/ex$option'.sh'
+      echo 'Invalid number (> 13), try again.'
+      continue
       ;;
     esac
-
-  else
-    echo Invalid number, try again.
+    ;;
+  *)
+    echo 'Invalid option, try again.'
     continue
-  fi
+    ;;
+  esac
 
   # Exit
   read -p 'Continue? [Y/n] ' quit

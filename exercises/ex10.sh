@@ -9,5 +9,5 @@ do
         break
     fi
     arr+=($word)
-    ./ex9.sh ${arr[@]}
+    ./exercises/ex9.sh ${arr[@]}
 done

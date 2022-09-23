@@ -1,4 +1,5 @@
 #!/bin/bash
+cd $1
 list=`ls -la | tr -s ' ' | cut -d' ' -f9`
 for i in $list
 do

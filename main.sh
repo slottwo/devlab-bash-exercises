@@ -5,7 +5,7 @@ while :; do
   read -p "Select one of thirteen scripts to run. [0=quit/1-13] " option
 
   case $option in
-  ''|*^[!0-9]*)
+  '' | *^[!0-9]*) # If is not a positive integer
     echo "Invalid option, try again."
     continue
     ;;
@@ -20,10 +20,10 @@ while :; do
       echo "Exiting..."
       exit
       ;;
-    1 | 3 | 4 | 7 | 9 | 11)
-      read -p "Input: " input
+    1 | 3 | 4 | 7 | 9 | 11) # Scripts that need cli arguments
+      read -p "Input: " args
       echo "Output:"
-      ./exercises/ex$option.sh $input
+      ./exercises/ex$option.sh $args
       ;;
     2 | 5 | 6 | 8 | 10 | 13)
       echo "Output:"

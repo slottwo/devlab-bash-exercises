@@ -2,7 +2,7 @@
 
 while :; do
   # Exercise selection
-  read -p "Select one of thirteen scripts to run. [0=quit/1-13] " option
+  read -p "Select one of thirteen scripts to run. [0=cancel/1-13] " option
 
   case $option in
   '' | *^[!0-9]*) # If is not a positive integer

@@ -19,12 +19,12 @@ There was also an incentive for the introductory use of Git and GitHub, making u
 
 ### Authors
 
-- [Ana Luiza Torres](@analuizatorres)
-- [Pedro H. S. F. Galvão](@slottwo)
+- [Ana Luiza Torres](https://github.com/analuizatorres)
+- [Pedro H. S. F. Galvão](https://github.com/slottwo)
 
 ### Advisor
 
-- [Ramon Santos Nepomuceno](@ramonufca)
+- [Ramon Santos Nepomuceno](https://github.com/ramonufca)
 
 ## Use
 
